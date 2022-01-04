@@ -1,1 +1,1 @@
-# TechnicalInterviewCourse
+# Read me file for Technical Interview Course
