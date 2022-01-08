@@ -13,3 +13,11 @@
 
 # Input : n = 13
 # Output : False
+
+def power_of_two(num):
+    if num == 2 or num == 1:
+        return 'True'
+    elif round(num) != num:
+        return 'False'
+    else:
+        return power_of_two(num/2)
