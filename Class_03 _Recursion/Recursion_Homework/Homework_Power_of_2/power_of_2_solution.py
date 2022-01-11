@@ -31,3 +31,30 @@ def another_power_of_2_example(n):
         return another_power_of_2_example(n)
     else:
         return False
+
+# def fibonacci(n):
+#     if n == 1 or n == 2:
+#         return 1
+#     else:
+#         return fibonacci(n-1) + fibonacci(n-2)
+
+# num = int(input('What is the num'))
+# print(fibonacci(num))
+
+# def palin(str):
+#     if str[0] != str[-1] :
+#         return False
+#     elif (len(str) == 1) or (len(str) == 0) :
+#         return True
+#     else:
+#         return palin(str[1:-1])
+
+# print(palin(input('Give string')))
+
+def sumNums(num):
+    if num == 1 or num == 0:
+        return num
+    else:
+        return sumNums(num - 1) + num
+
+print(sumNums(int(input('number:'))))
