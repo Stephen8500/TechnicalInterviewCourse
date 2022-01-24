@@ -18,7 +18,7 @@ def product_of_arrays_except_self(nums):
 
     return product_nums
 
-print(product_of_arrays_except_self(input_array))
+#print(product_of_arrays_except_self(input_array))
 
 # Multiply both sides of the array
 def product_of_arrays_except_self_optimized(nums):

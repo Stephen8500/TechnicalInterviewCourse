@@ -23,7 +23,7 @@ def minimum_rotated_sorted_array_optimized(nums):
     high = len(nums) - 1
 
     while low < high:
-        guess = (low + high) / 2
+        guess = (low + high) // 2
         if nums[guess] > nums[high]:
             low = guess + 1
         else:
