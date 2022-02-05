@@ -15,3 +15,21 @@ s2 = 'foo'
 t2 = 'bar'
 s3 = 'paper'
 t3 = 'title'
+
+def is_iso(s, t):
+    # dictS = {}
+    # dictT = {}
+    if len(s) != len(t):
+        return False
+    dictComb = {}
+    for i in range(0,len(s)):
+        if s[i] in dictComb.keys():
+            if dictComb[s[i]] != t[i]:
+                return False
+        dictComb[s[i]] = t[i]
+
+    return True
+
+print(is_iso(s1, t1))
+print(is_iso(s2, t2))
+print(is_iso(s3, t3))
