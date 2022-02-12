@@ -29,6 +29,7 @@ def quick_sort(arr):
         return arr
     
     #find pivot and sort greater/less than then run recursion
+    # find pivot and remove it from array
     a = arr[0]
     b = arr[len(arr)//2]
     c = arr[len(arr) - 1]
@@ -47,15 +48,19 @@ def quick_sort(arr):
     if pivot == c:
         arr.pop(-1)
     
+    # initialize greater and lower arrays
     lower = []
     greater = []
 
+    # loop through items in array and classify them 
+    # as lower or greater than pivot
     for i in range(0, len(arr) - 1):
         if arr[i] > pivot:
             greater.append(arr[i])
         else:
             lower.append(arr[i])
     
+    # recursive run, adds lower array (sorted), pivot, and greater array (sorted)
     return quick_sort(lower) + [pivot] + quick_sort(greater)
 
 print(quick_sort([5,6,7,8,9,8,7,6,5,6,7,8,9,0,1,2,3,4,8,6,5,1,6,2,4,1]))
