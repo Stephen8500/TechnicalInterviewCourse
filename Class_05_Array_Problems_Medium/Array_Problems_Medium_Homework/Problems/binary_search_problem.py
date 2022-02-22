@@ -68,6 +68,21 @@
 array = [1,2,3,4,5,6,7,9,10,12,20,26,92,400,900,933,20000,505050,90000000]
 n = 20000
 
+def searchPractice(array, n):
+    l = 0
+    u = len(array) - 1
+
+    while l <= u:
+        mid = (l+u)//2
+
+        if array[mid] == n:
+            return mid
+        elif array[mid] > n:
+            u = mid - 1
+        else:
+            l = mid + 1
+    return "not found"
+
 def search(array, n):
     l = 0
     u = len(array) - 1
@@ -83,7 +98,7 @@ def search(array, n):
             l = mid + 1
     return "not found"
 
-print(search(array, 1))
+print(searchPractice(array, 400))
 
 
 
